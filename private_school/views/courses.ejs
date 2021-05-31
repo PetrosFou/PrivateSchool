@@ -1,0 +1,40 @@
+<%- include('partials/head')%>
+    <%- include('partials/navbar') %>
+    
+    
+    <div class="container text-center mt-3">
+        <h1><%= title %></h1>
+    <table class="d-flex justify-content-center">
+      <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Stream</th>
+          <th>Type</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+      </tr>
+      <% for(let i=0; i < course.length; i++) { %>
+          <tr>
+              <td class="border border-dark font-weight-bold">
+                  <%= course[i].id %>
+              </td>
+              <td class="border border-dark font-weight-bold">
+                  <%= course[i].title %>
+              </td>
+              <td class="border border-dark font-weight-bold">
+                  <%= course[i].stream %>
+              </td>
+              <td class="border border-dark font-weight-bold">
+                  <%= course[i].type %>
+              </td>
+              <td class="border border-dark font-weight-bold">
+                <%= course[i].start_date.getDate() %> / <%= course[i].start_date.getMonth()+1 %> / <%= course[i].start_date.getFullYear() %>
+              </td>
+              <td class="border border-dark font-weight-bold">
+                <%= course[i].end_date.getDate() %> / <%= course[i].end_date.getMonth()+1 %> / <%= course[i].end_date.getFullYear() %>
+              </td>
+          </tr>
+          <% } %>
+  </table>
+</div>
+  <%- include('partials/footer')%>

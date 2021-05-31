@@ -1,0 +1,19 @@
+<%- include('partials/head')%>
+    <%- include('partials/navbar') %>
+   
+    <h2 class="mt-3"><%= title %></h2>
+    
+    
+    <form action="" method="post">
+        <label for="firstName">First Name:</label>
+        <input type="text" name="firstName" id="firstName" placeholder="First Name">
+        <label for="lastName">Last Name:</label>
+        <input type="text" name="lastName" id="lastName" placeholder="Last Name">
+        <label for="dateOfBirth">Date Of Birth:</label>
+        <input type="date" name="dateOfBirth" id="dateOfBirth" placeholder="Date Of Birth">
+        <label for="tuitionFees">Tuition Fees:</label>
+        <input type="number" name="tuitionFees" id="tuitionFees" placeholder="Tuition Fees">
+        <button type="submit">Add new Student</button>
+    </form>
+    <div id="message"><%= message %></div>
+    <%- include('partials/footer')%>

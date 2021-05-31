@@ -1,0 +1,35 @@
+<%- include('partials/head')%>
+  <%- include('partials/navbar') %>
+    
+    <div class="container text-center mt-3">
+      <h1><%= title %></h1>
+    <table class="d-flex justify-content-center">
+      <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Submission Date</th>
+        <th>Total Mark</th>
+      </tr>
+      <% for(let i=0; i < assignment.length; i++) { %>
+        <tr>
+          <td class="border border-dark font-weight-bold">
+            <%= assignment[i].id %>
+          </td>
+          <td class="border border-dark font-weight-bold">
+            <%= assignment[i].title %>
+          </td>
+          <td class="border border-dark font-weight-bold">
+            <%= assignment[i].description %>
+          </td>
+          <td class="border border-dark font-weight-bold">
+            <%= assignment[i].subDateTime.getDate() %> / <%= assignment[i].subDateTime.getMonth()+1 %> / <%=
+                  assignment[i].subDateTime.getFullYear() %>
+          </td>
+          <td class="border border-dark font-weight-bold">
+            <%= assignment[i].totalMark %>
+          </td>
+        </tr>
+        <% } %>
+      </div>
+          <%- include('partials/footer')%>

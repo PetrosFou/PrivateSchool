@@ -1,0 +1,14 @@
+body {
+  background-image: url(../images/porter-raab-gnj9vj--FRY-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}

@@ -1,0 +1,33 @@
+<%- include('partials/head')%>
+    <%- include('partials/navbar') %>
+    
+
+    <div class="container text-center mt-3">
+        <h1><%= title %></h1>
+    <table class="d-flex justify-content-center">
+      <tr>
+          <th>ID</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Subject</th>
+      </tr>
+      <% for(let i=0; i < trainer.length; i++) { %>
+          <tr>
+              <td class="border border-dark font-weight-bold">
+                  <%= trainer[i].id %>
+              </td>
+              <td class="border border-dark font-weight-bold">
+                  <%= trainer[i].firstName %>
+              </td>
+              <td class="border border-dark font-weight-bold">
+                  <%= trainer[i].lastName %>
+              </td>
+              <td class="border border-dark font-weight-bold">
+                  <%= trainer[i].subject %>
+              </td>
+          </tr>
+          <% } %>
+  </table>
+  <a class="btn btn-secondary mt-3" href="http://localhost:3000/trainers/add">Add new Trainer</a>
+</div>
+  <%- include('partials/footer')%>

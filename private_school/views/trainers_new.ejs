@@ -1,0 +1,24 @@
+<%- include('partials/head')%>
+    <%- include('partials/navbar') %>
+    <h2 class="mt-3"><%= title %></h2>
+
+    <form action="" method="post">
+        <label for="firstName">First Name:</label>
+        <input type="text" name="firstName" id="firstName" placeholder="First Name">
+        <label for="lastName">Last Name:</label>
+        <input type="text" name="lastName" id="lastName" placeholder="Last Name">
+        <label for="subject">Subject:</label>
+        <select name="subject" id="new_subject">
+            <option value="">Select a subject</option>
+            <option value="Java">Java</option>
+            <option value="C#">C#</option>
+            <option value="C++">C++</option>
+            <option value="Javascript">Javascript</option>
+            <option value="Angural">Angular</option>
+            <option value="Node js">Node js</option>
+            <option value="Android">Android</option>
+        </select>
+        <button type="submit">Add new Trainer</button>
+    </form>
+    <div id="message"><%= message %></div>
+    <%- include('partials/footer')%>

@@ -1,0 +1,36 @@
+<%- include('partials/head')%>
+    <%- include('partials/navbar') %>
+
+    <div class="container text-center mt-3">
+        <h1><%= title %></h1>
+    <table class="d-flex justify-content-center">
+      <tr>
+          <th>ID</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Tuition Fees</th>
+          <th>Date of Birth</th>
+      </tr>
+      <% for(let i=0; i < student.length; i++) { %>
+          <tr>
+              <td class="border border-dark font-weight-bold">
+                  <%= student[i].id %>
+              </td>
+              <td class="border border-dark font-weight-bold">
+                  <%= student[i].firstName %>
+              </td>
+              <td class="border border-dark font-weight-bold">
+                  <%= student[i].lastName %>
+              </td>
+              <td class="border border-dark font-weight-bold">
+                  <%= student[i].tuitionFees %>
+              </td>
+              <td class="border border-dark font-weight-bold">
+                <%= student[i].dateOfBirth.getDate() %> / <%= student[i].dateOfBirth.getMonth()+1 %> / <%= student[i].dateOfBirth.getFullYear() %>
+            </td>
+          </tr>
+          <% } %>
+  </table>
+  <a class="btn btn-secondary mt-3" href="http://localhost:3000/students/add">Add new Student</a>
+</div>
+  <%- include('partials/footer')%>
